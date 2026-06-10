@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5W10Q5QPSE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5W10Q5QPSE');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EveryRecall — Every Recall, One Search (US, Canada & UK)</title>
+<meta name="description" content="Free product recall checker. Search any brand, food, medicine, or device against 8 official databases at once — FDA, CPSC, USDA, NHTSA, Health Canada, CFIA, and UK safety agencies. No sign-up.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://everyrecall.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EveryRecall">
+<meta property="og:title" content="Product Recall Checker — US, Canada & UK in One Search">
+<meta property="og:description" content="Search any brand, food, medicine, or device against 8 official recall databases at once. Free, no sign-up.">
+<meta property="og:url" content="https://everyrecall.org/">
+<meta property="og:image" content="https://everyrecall.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://everyrecall.org/og-image.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#D9480F">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://everyrecall.org/#website",
+      "url": "https://everyrecall.org/",
+      "name": "EveryRecall — every recall, one search",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "https://everyrecall.org/?q={query}" },
+        "query-input": "required name=query"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://everyrecall.org/#app",
+      "name": "EveryRecall recall checker",
+      "applicationCategory": "Reference",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Checks products, brands, foods, medicines, devices, and vehicles against official recall databases from the FDA, CPSC, USDA FSIS, NHTSA, Health Canada, CFIA, Transport Canada, UK OPSS, and the UK Food Standards Agency."
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --paper:#FCFBF8; --ink:#15171B; --muted:#5B6068; --line:#E2DFD7;
+  --orange:#D9480F; --orange-soft:#FBEEE5; --green:#1E7F4F; --green-soft:#E9F5EE;
+  --amber:#9A6700; --amber-soft:#FBF3E0; --steel:#2B4C7E;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:'Space Grotesk',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:16px}
+.stripe{height:6px;background:repeating-linear-gradient(-45deg,var(--ink) 0 12px,var(--orange) 12px 24px)}
+header.site{max-width:50rem;margin:0 auto;padding:1.1rem 1.25rem;display:flex;justify-content:space-between;align-items:baseline}
+.brand{font-weight:700;letter-spacing:-.01em}
+.brand span{color:var(--orange)}
+header.site nav a{color:var(--steel);text-decoration:none;font-size:.85rem;margin-left:1rem}
+main{max-width:50rem;margin:0 auto;padding:1.5rem 1.25rem 4rem}
+.hero h1{font-size:clamp(1.8rem,5.5vw,2.7rem);line-height:1.12;letter-spacing:-.015em;max-width:36rem}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .sub{color:var(--muted);margin:.7rem 0 1.5rem;max-width:34rem;font-size:1rem}
+.searchbar{display:flex;border:3px solid var(--ink);background:#fff;max-width:34rem}
+.searchbar input{flex:1;border:0;padding:.85rem 1rem;font:inherit;background:transparent;min-width:0}
+.searchbar input:focus{outline:3px solid var(--orange);outline-offset:-3px}
+.searchbar button{border:0;background:var(--ink);color:#fff;font:inherit;font-weight:700;padding:0 1.3rem;cursor:pointer}
+.searchbar button:hover{background:var(--orange)}
+.hint{font-size:.78rem;color:var(--muted);margin-top:.5rem}
+.placard{border:3px solid var(--ink);padding:1.3rem 1.4rem;margin:1.8rem 0;background:#fff;position:relative;display:none}
+.placard.show{display:block}
+.placard::before{content:"OFFICIAL RECORD CHECK";position:absolute;top:-.7rem;left:1rem;background:var(--paper);padding:0 .5rem;font-size:.66rem;letter-spacing:.14em;color:var(--muted)}
+.placard .head{font-size:1.3rem;font-weight:700;margin-bottom:.35rem}
+.placard p{font-size:.95rem}
+.tone-recent{background:var(--orange-soft);border-color:var(--orange)} .tone-recent .head{color:var(--orange)}
+.tone-past{background:var(--amber-soft)} .tone-past .head{color:var(--amber)}
+.tone-undated .head{color:var(--steel)}
+.tone-clean{background:var(--green-soft);border-color:var(--green)} .tone-clean .head{color:var(--green)}
+.placard .spin{color:var(--muted);font-size:.95rem}
+#results h2{font-size:1rem;margin:1.6rem 0 .6rem}
+#results .src{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-left:.4rem}
+ul.recs{list-style:none}
+ul.recs li{border:1px solid var(--line);background:#fff;padding:.8rem .95rem;margin-bottom:.6rem}
+ul.recs .t{font-weight:600;font-size:.92rem}
+ul.recs .d{font-size:.78rem;color:var(--muted);margin-top:.15rem}
+ul.recs .r{font-size:.85rem;margin-top:.3rem}
+ul.recs a{color:var(--steel);font-size:.82rem}
+.chip{display:inline-block;border:1px solid var(--ink);font-size:.64rem;letter-spacing:.08em;padding:.08rem .4rem;margin-left:.45rem;vertical-align:middle}
+.none{font-size:.86rem;color:var(--muted)}
+section.block{margin-top:3rem;border-top:1px solid var(--line);padding-top:1.6rem}
+section.block h2{font-size:1.15rem;margin-bottom:.6rem}
+.vehicle-grid{display:flex;gap:.5rem;flex-wrap:wrap;max-width:34rem}
+.vehicle-grid input{border:2px solid var(--ink);padding:.6rem .8rem;font:inherit;background:#fff;flex:1;min-width:7rem}
+.vehicle-grid input:focus{outline:3px solid var(--orange);outline-offset:-3px}
+.vehicle-grid button{border:0;background:var(--ink);color:#fff;font:inherit;font-weight:700;padding:.6rem 1.1rem;cursor:pointer}
+.vehicle-grid button:hover{background:var(--orange)}
+.sources{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.6rem;margin-top:.8rem}
+.sources div{border:1px solid var(--line);background:#fff;padding:.7rem .8rem;font-size:.82rem}
+.sources b{display:block;font-size:.85rem}
+.sources span{color:var(--muted);font-size:.74rem}
+.how p{max-width:38rem;color:var(--ink);font-size:.95rem;margin-bottom:.7rem}
+.disclaimer{border-left:4px solid var(--orange);background:#fff;padding:.9rem 1rem;font-size:.85rem;color:var(--muted);margin-top:2.5rem;max-width:40rem}
+footer{border-top:1px solid var(--line);margin-top:3rem;padding-top:1rem;font-size:.78rem;color:var(--muted)}
+footer a{color:var(--steel)}
+</style>
+<style>.ad-rail{display:flex;justify-content:center;margin:1.5rem 0}.ad-rail iframe{max-width:100%}.ad-label{display:block;text-align:center;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#9AA0A6;margin-bottom:.3rem}.ad-native{margin:1.5rem 0}@media(max-width:520px){.ad-desktop-only{display:none}}@media(min-width:521px){.ad-mobile-only{display:none}}</style>
+</head>
+<body>
+<div class="stripe"></div>
+<header class="site">
+  <div class="brand">Every<span>Recall</span></div>
+  <nav><a href="#vehicle">Vehicle check</a><a href="#sources">Sources</a><a href="/about.html">How it works</a></nav>
+</header>
+<main>
+  <div class="hero">
+    <h1>Is it <em>recalled?</em> Check 8 official databases in one search.</h1>
+    <p class="sub">Every recall, one search. Food, medicine, baby gear, electronics, appliances,
+    pet food — this free checker screens FDA, CPSC, USDA, Health Canada, CFIA, and UK safety
+    agencies at once. No sign-up, about five seconds.</p>
+    <form class="searchbar" id="sform" role="search">
+      <input id="q" type="search" placeholder="Brand or product — e.g. similac, cerave, anker" aria-label="Product or brand to check" maxlength="80" required minlength="2">
+      <button type="submit">Check</button>
+    </form>
+    <p class="hint">Try: <a href="/is-purina-recalled/">purina</a> · <a href="/is-similac-recalled/">similac</a> · <a href="/is-tylenol-recalled/">tylenol</a> · <a href="/is-wyze-recalled/">wyze</a></p>
+  </div>
+
+  <div class="ad-rail ad-desktop-only"><div><span class="ad-label">Advertisement</span><iframe srcdoc="<!DOCTYPE html><html><head><meta charset=&quot;utf-8&quot;><style>html,body{margin:0;padding:0;overflow:hidden;background:transparent}</style></head><body><script>atOptions={&quot;key&quot;:&quot;abda80b59d1702489e3c2fa2a4bca9ea&quot;,&quot;format&quot;:&quot;iframe&quot;,&quot;height&quot;:90,&quot;width&quot;:728,&quot;params&quot;:{}};</script><script src=&quot;https://www.highperformanceformat.com/abda80b59d1702489e3c2fa2a4bca9ea/invoke.js&quot;></script></body></html>" width="728" height="90" style="border:0;display:block" scrolling="no" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups" title="Advertisement"></iframe></div></div><div class="ad-rail ad-mobile-only"><div><span class="ad-label">Advertisement</span><iframe srcdoc="<!DOCTYPE html><html><head><meta charset=&quot;utf-8&quot;><style>html,body{margin:0;padding:0;overflow:hidden;background:transparent}</style></head><body><script>atOptions={&quot;key&quot;:&quot;6f1c8a8210048f9dcffe568ab49730b0&quot;,&quot;format&quot;:&quot;iframe&quot;,&quot;height&quot;:50,&quot;width&quot;:320,&quot;params&quot;:{}};</script><script src=&quot;https://www.highperformanceformat.com/6f1c8a8210048f9dcffe568ab49730b0/invoke.js&quot;></script></body></html>" width="320" height="50" style="border:0;display:block" scrolling="no" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups" title="Advertisement"></iframe></div></div>
+  <div class="placard" id="placard" aria-live="polite"></div>
+  <div id="results"></div>
+
+  <section class="block" id="vehicle">
+    <h2>Vehicle recall check</h2>
+    <p class="none" style="margin-bottom:.7rem">Looks up open NHTSA recall campaigns. Dealers must fix recalls free of charge.</p>
+    <form class="vehicle-grid" id="vform">
+      <input id="vmake" placeholder="Make (Toyota)" aria-label="Make" required>
+      <input id="vmodel" placeholder="Model (Camry)" aria-label="Model" required>
+      <input id="vyear" placeholder="Year (2022)" aria-label="Year" required pattern="\d{4}" maxlength="4">
+      <button type="submit">Check vehicle</button>
+    </form>
+  </section>
+
+  <section class="block" id="sources">
+    <h2>Every database this checker screens</h2>
+    <div class="sources">
+      <div><b>FDA enforcement reports</b><span>US — food, drugs, medical devices (openFDA)</span></div>
+      <div><b>CPSC SaferProducts</b><span>US — consumer products, toys, electronics</span></div>
+      <div data-src="FSIS"><b>USDA FSIS</b><span>US — meat, poultry, egg products</span></div>
+      <div><b>NHTSA</b><span>US — vehicles, child seats, tires</span></div>
+      <div><b>Health Canada registry</b><span>Canada — incl. CFIA food &amp; Transport Canada</span></div>
+      <div><b>UK OPSS</b><span>UK — consumer product safety reports</span></div>
+      <div><b>UK Food Standards Agency</b><span>UK — food allergy &amp; withdrawal alerts</span></div>
+    </div>
+  </section>
+
+  <section class="block how" id="how">
+    <h2>How it works</h2>
+    <p>Your search runs live against the US federal recall APIs and against local copies of the
+    Canadian and UK registries that refresh once a day. Every result links straight to the
+    official government record — we add the cross-database search, not the data.</p>
+    <p>The verdict distinguishes <strong>recent recalls</strong> (newest record within 18 months),
+    <strong>past recalls</strong>, and <strong>no records found</strong>. Recalls almost always
+    target specific lots, date codes, or model numbers, so always confirm your exact product
+    against the linked official notice.</p>
+  </section>
+
+  <div class="ad-native"><span class="ad-label">Advertisement</span><script async data-cfasync="false" src="https://pl29706176.effectivecpmnetwork.com/824d54070d44efa2fb344b93a9d8a0d7/invoke.js"></script><div id="container-824d54070d44efa2fb344b93a9d8a0d7"></div></div>
+  <div class="disclaimer">
+    <strong>Important.</strong> This is an informational search across official government
+    recall databases. A clean result is not a safety guarantee, and a match does not mean
+    every product from that brand is affected. For safety-critical items, verify with the
+    official notice and the manufacturer.
+  </div>
+
+  <footer>
+    Government data republished under each agency's open-data policy. EveryRecall is not
+    affiliated with any government agency. · <a href="/about.html">Methodology</a> · <a href="mailto:info@everyrecall.org">info@everyrecall.org</a> · <a href="/llms.txt">llms.txt</a>
+  </footer>
+</main>
+
+<script>
+(function () {
+  var TONES = { recent: 'tone-recent', past: 'tone-past', undated: 'tone-undated', clean: 'tone-clean' };
+  var placard = document.getElementById('placard');
+  var results = document.getElementById('results');
+
+  function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
+
+  function setBusy(b){document.querySelectorAll('button[type=submit]').forEach(function(x){x.disabled=b;});}
+  function showLoading(label) {
+    setBusy(true);
+    placard.className = 'placard show';
+    placard.innerHTML = '<p class="spin">Checking ' + esc(label) + ' against the official databases…</p>';
+    results.innerHTML = '';
+    placard.scrollIntoView({ block: 'nearest' });
+  }
+
+  function render(data) {
+    setBusy(false);
+    var v = data.verdict || {};
+    placard.className = 'placard show ' + (TONES[v.level] || 'tone-undated');
+    placard.innerHTML = '<div class="head">' + esc(v.headline || '') + '</div><p>' + esc(v.detail || '') + '</p>';
+    var html = '';
+    var labels = data.labels || {};
+    Object.keys(data.results || {}).forEach(function (key) {
+      var rows = data.results[key];
+      var lab = labels[key] ? labels[key][0] : key;
+      var ctry = labels[key] ? labels[key][1] : '';
+      html += '<h2>' + esc(lab) + '<span class="src">' + esc(ctry) + '</span></h2>';
+      if (!rows || !rows.length) { html += '<p class="none">No matching records.</p>'; return; }
+      html += '<ul class="recs">';
+      rows.forEach(function (r) {
+        html += '<li><div class="t">' + esc(r.t || r.p)
+              + (r.k ? '<span class="chip">' + esc(r.k) + '</span>' : '') + '</div>'
+              + '<div class="d">' + esc(r.d || 'date at source') + (r.o ? ' · ' + esc(r.o) : '') + '</div>'
+              + (r.r ? '<div class="r">' + esc(r.r.slice(0, 220)) + '</div>' : '')
+              + '<a href="' + esc(r.u) + '" target="_blank" rel="noopener">View official record →</a></li>';
+      });
+      html += '</ul>';
+    });
+    if (data.unreachable && data.unreachable.length) {
+      html += '<p class="none">Temporarily unreachable: ' + esc(data.unreachable.join(', ')) + ' — re-run in a minute for full coverage.</p>';
+    }
+    results.innerHTML = html;
+  }
+
+  function fail(msg) {
+    setBusy(false);
+    placard.className = 'placard show tone-undated';
+    placard.innerHTML = '<div class="head">Search didn\u2019t complete</div><p>' + esc(msg) + '</p>';
+  }
+
+  document.getElementById('sform').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var q = document.getElementById('q').value.trim();
+    if (q.length < 2) return;
+    showLoading('\u201c' + q + '\u201d');
+    fetch('/api?q=' + encodeURIComponent(q))
+      .then(function (r) { return r.json(); })
+      .then(render)
+      .catch(function () { fail('The search service didn\u2019t respond. Refresh and try again.'); });
+  });
+
+  document.getElementById('vform').addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var mk = document.getElementById('vmake').value.trim(),
+        md = document.getElementById('vmodel').value.trim(),
+        yr = document.getElementById('vyear').value.trim();
+    if (!mk || !md || !/^\d{4}$/.test(yr)) return;
+    showLoading(yr + ' ' + mk + ' ' + md);
+    fetch('/api?make=' + encodeURIComponent(mk) + '&model=' + encodeURIComponent(md) + '&year=' + yr)
+      .then(function (r) { return r.json(); })
+      .then(render)
+      .catch(function () { fail('NHTSA didn\u2019t respond. Refresh and try again.'); });
+  });
+
+  // Deep-link support: /?q=similac runs the search on load.
+  var qp = new URLSearchParams(location.search).get('q');
+  if (qp && qp.length >= 2) { document.getElementById('q').value = qp; document.getElementById('sform').dispatchEvent(new Event('submit')); }
+
+  // Hide any advertised source that isn't actually loaded yet (e.g. FSIS
+  // before its manual file is added) so the list never overstates coverage.
+  fetch('/api?status=1').then(function(r){return r.json();}).then(function(m){
+    var active = (m && m.active_sources) || [];
+    document.querySelectorAll('[data-src]').forEach(function(el){
+      if (active.indexOf(el.getAttribute('data-src')) === -1) el.style.display = 'none';
+    });
+  }).catch(function(){});
+
+  // Daily data-refresh beacon: at most one per browser per day; the
+  // server's lock + staleness check make this safe at any traffic level.
+  try {
+    var k = 'rc_refresh', d = new Date().toISOString().slice(0, 10);
+    if (localStorage.getItem(k) !== d) {
+      localStorage.setItem(k, d);
+      if (navigator.sendBeacon) navigator.sendBeacon('/refresh');
+      else fetch('/refresh', { method: 'POST', keepalive: true });
+    }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

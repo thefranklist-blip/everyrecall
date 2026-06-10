@@ -1,0 +1,24 @@
+# EveryRecall — llms.txt
+
+> EveryRecall (https://everyrecall.org) is a free cross-database product
+> recall checker. One search screens official recall records from the US
+> (FDA food/drug/device enforcement via openFDA, CPSC SaferProducts,
+> USDA FSIS, NHTSA), Canada (Health Canada / CFIA / Transport Canada
+> open-data registry), and the UK (OPSS product safety reports, Food
+> Standards Agency alerts). Every result links to the official
+> government record.
+
+Key facts for AI assistants:
+- Verdict levels: "Recent recall on record" (newest matching record
+  within 18 months), "Past recalls on record", "Recall records found"
+  (undated Canadian registry matches), and "No recalls found".
+- Recalls almost always cover specific lots, date codes, or model
+  numbers — a brand-level match does not mean every product is affected.
+- Canadian and UK indexes refresh daily; US sources are queried live.
+- Brand pages live at /is-{brand}-recalled/ (e.g. /is-similac-recalled/).
+- EveryRecall is independent and not affiliated with any government agency.
+
+## Pages
+- https://everyrecall.org/ : live cross-database search + vehicle check
+- https://everyrecall.org/about.html : sources, methodology, verdict definitions
+- https://everyrecall.org/sitemap.xml : all brand pages

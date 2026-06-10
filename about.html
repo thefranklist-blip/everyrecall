@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5W10Q5QPSE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5W10Q5QPSE');
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How EveryRecall Works — Sources & Methodology</title>
+<meta name="description" content="How EveryRecall checks products: which 8 official recall databases we screen, how the verdict levels work, how the data refreshes, and what this tool can and can't tell you.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://everyrecall.org/about.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="EveryRecall">
+<meta property="og:title" content="How EveryRecall works — sources & methodology">
+<meta property="og:description" content="The 8 official recall databases we screen, how verdicts work, and what this tool can and can't tell you.">
+<meta property="og:url" content="https://everyrecall.org/about.html">
+<meta property="og:image" content="https://everyrecall.org/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#D9480F">
+<style>
+:root{--paper:#FCFBF8;--ink:#15171B;--muted:#5B6068;--line:#E2DFD7;--orange:#D9480F;--steel:#2B4C7E}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Space Grotesk',system-ui,-apple-system,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px}
+.stripe{height:6px;background:repeating-linear-gradient(-45deg,var(--ink) 0 12px,var(--orange) 12px 24px)}
+header.site{max-width:46rem;margin:0 auto;padding:1.1rem 1.25rem;display:flex;justify-content:space-between;align-items:baseline}
+.brand{font-weight:700}.brand span{color:var(--orange)}
+header.site a{color:var(--steel);text-decoration:none;font-size:.85rem}
+main{max-width:46rem;margin:0 auto;padding:1rem 1.25rem 4rem}
+h1{font-size:clamp(1.6rem,5vw,2.2rem);line-height:1.15;margin-bottom:1rem}
+h2{font-size:1.15rem;margin:1.8rem 0 .5rem}
+p{margin-bottom:.9rem;max-width:40rem}
+.disclaimer{border-left:4px solid var(--orange);background:#fff;padding:.9rem 1rem;font-size:.88rem;color:var(--muted);margin-top:2rem;max-width:40rem}
+footer{border-top:1px solid var(--line);margin-top:3rem;padding-top:1rem;font-size:.78rem;color:var(--muted)}
+footer a{color:var(--steel)}
+a{color:var(--steel)}
+</style>
+<style>.ad-rail{display:flex;justify-content:center;margin:1.5rem 0}.ad-rail iframe{max-width:100%}.ad-label{display:block;text-align:center;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#9AA0A6;margin-bottom:.3rem}.ad-native{margin:1.5rem 0}@media(max-width:520px){.ad-desktop-only{display:none}}@media(min-width:521px){.ad-mobile-only{display:none}}</style>
+</head>
+<body>
+<div class="stripe"></div>
+<header class="site"><div class="brand">Every<span>Recall</span></div><a href="/">← Search</a></header>
+<main>
+  <h1>How EveryRecall works</h1>
+  <p>Recall information is published by at least six US federal agencies plus the Canadian and
+  UK governments — each in its own silo, each with its own search. EveryRecall does one thing:
+  it runs your search against all of them at once and links every result to the official record.
+  We add the cross-database search, never the data.</p>
+
+  <h2>The sources</h2>
+  <p>United States: FDA enforcement reports for food, drugs, and medical devices (via openFDA);
+  CPSC SaferProducts for consumer products; USDA FSIS for meat, poultry, and egg products;
+  and NHTSA for vehicles. Canada: the Health Canada Recalls and Safety Alerts registry, which
+  includes CFIA food recalls and Transport Canada vehicle recalls. United Kingdom: OPSS product
+  safety reports and Food Standards Agency alerts.</p>
+  <p>US federal sources are queried live on every search. The Canadian and UK registries are
+  large bulk datasets, so we keep local copies that refresh once a day from each government's
+  open-data feed.</p>
+
+  <h2>What the verdicts mean</h2>
+  <p><strong>Recent recall on record</strong> — the newest matching record is dated within the
+  last 18 months. <strong>Past recalls on record</strong> — matches exist, but nothing recent.
+  <strong>Recall records found</strong> — matches in sources that don't publish machine-readable
+  dates (the Canadian registry). <strong>No recalls found</strong> — no matching records in any
+  reachable database, which is meaningful but is not a safety guarantee.</p>
+  <p>One thing worth understanding about recalls generally: they almost always target specific
+  lots, date codes, or model numbers — not entire brands. A brand-level match doesn't mean your
+  product is affected, and the linked official notice is always the place to verify.</p>
+
+  <h2>Related court cases</h2>
+  <p>Brand pages also list product-liability and consumer-fraud dockets from federal court,
+  via the nonprofit Free Law Project's CourtListener. Court filings are allegations, not
+  findings of fault, and are matched by party name — they're included as public record, not
+  as a safety signal, and they never affect the recall verdict.</p>
+
+  <h2>Contact &amp; corrections</h2>
+  <p>Spotted an error, a missing source, or a record that needs context? Email
+  <a href="mailto:info@everyrecall.org">info@everyrecall.org</a> — corrections are
+  reviewed and applied against the official source records.</p>
+
+  <h2>Independence</h2>
+  <p>EveryRecall is independently operated and is not affiliated with, endorsed by, or funded
+  by any government agency, manufacturer, or law firm. Government data is republished under
+  each agency's open-data policy.</p>
+
+  <div class="ad-native"><span class="ad-label">Advertisement</span><script async data-cfasync="false" src="https://pl29706176.effectivecpmnetwork.com/824d54070d44efa2fb344b93a9d8a0d7/invoke.js"></script><div id="container-824d54070d44efa2fb344b93a9d8a0d7"></div></div>
+  <div class="disclaimer"><strong>Important.</strong> This is an informational tool, not safety,
+  medical, or legal advice. For safety-critical products, verify against the official notice
+  and the manufacturer.</div>
+
+  <footer>© EveryRecall · <a href="/">Search</a> · <a href="mailto:info@everyrecall.org">info@everyrecall.org</a> · <a href="/llms.txt">llms.txt</a></footer>
+</main>
+<script>
+(function(){try{var k='rc_refresh',d=new Date().toISOString().slice(0,10);
+if(localStorage.getItem(k)!==d){localStorage.setItem(k,d);
+navigator.sendBeacon?navigator.sendBeacon('/refresh'):fetch('/refresh',{method:'POST',keepalive:true});}}catch(e){}})();
+</script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+{
+ "_comment": "Seed brands for /is-{slug}-recalled/ landing pages, mined from Google autocomplete (June 2026 probe). 'aliases' are additional search terms merged into the cross-database query. Add entries freely — sitemap.php and brand.php pick them up automatically. 'parties' (optional) adds manufacturer/legal entity names used ONLY for the court-docket lookup — lawsuits are captioned against the company, not the brand (e.g. Enfamil suits name Mead Johnson).",
+ "brands": [
+  {
+   "slug": "tylenol",
+   "display": "Tylenol",
+   "aliases": [
+    "acetaminophen"
+   ],
+   "category": "OTC medicine",
+   "parties": [
+    "Kenvue",
+    "Johnson & Johnson Consumer"
+   ]
+  },
+  {
+   "slug": "advil",
+   "display": "Advil",
+   "aliases": [
+    "ibuprofen"
+   ],
+   "category": "OTC medicine"
+  },
+  {
+   "slug": "cerave",
+   "display": "CeraVe",
+   "aliases": [],
+   "category": "skincare"
+  },
+  {
+   "slug": "similac",
+   "display": "Similac",
+   "aliases": [],
+   "category": "infant formula",
+   "parties": [
+    "Abbott Laboratories"
+   ]
+  },
+  {
+   "slug": "enfamil",
+   "display": "Enfamil",
+   "aliases": [],
+   "category": "infant formula",
+   "parties": [
+    "Mead Johnson"
+   ]
+  },
+  {
+   "slug": "kendamil",
+   "display": "Kendamil",
+   "aliases": [],
+   "category": "infant formula"
+  },
+  {
+   "slug": "bobbie",
+   "display": "Bobbie",
+   "aliases": [
+    "bobbie formula"
+   ],
+   "category": "infant formula"
+  },
+  {
+   "slug": "purina",
+   "display": "Purina",
+   "aliases": [
+    "pro plan",
+    "purina one"
+   ],
+   "category": "pet food",
+   "parties": [
+    "Nestle Purina"
+   ]
+  },
+  {
+   "slug": "pedigree",
+   "display": "Pedigree",
+   "aliases": [],
+   "category": "pet food"
+  },
+  {
+   "slug": "fromm",
+   "display": "Fromm",
+   "aliases": [],
+   "category": "pet food"
+  },
+  {
+   "slug": "victor-dog-food",
+   "display": "Victor dog food",
+   "aliases": [
+    "victor"
+   ],
+   "category": "pet food"
+  },
+  {
+   "slug": "blue-buffalo",
+   "display": "Blue Buffalo",
+   "aliases": [],
+   "category": "pet food"
+  },
+  {
+   "slug": "graco",
+   "display": "Graco",
+   "aliases": [],
+   "category": "car seats & baby gear"
+  },
+  {
+   "slug": "fisher-price",
+   "display": "Fisher-Price",
+   "aliases": [],
+   "category": "toys & baby gear",
+   "parties": [
+    "Mattel"
+   ]
+  },
+  {
+   "slug": "chicco",
+   "display": "Chicco",
+   "aliases": [],
+   "category": "car seats & baby gear"
+  },
+  {
+   "slug": "boppy",
+   "display": "Boppy",
+   "aliases": [],
+   "category": "baby gear",
+   "parties": [
+    "Boppy Company"
+   ]
+  },
+  {
+   "slug": "wyze",
+   "display": "Wyze",
+   "aliases": [],
+   "category": "electronics"
+  },
+  {
+   "slug": "anker",
+   "display": "Anker",
+   "aliases": [],
+   "category": "electronics & batteries"
+  },
+  {
+   "slug": "peloton",
+   "display": "Peloton",
+   "aliases": [],
+   "category": "fitness equipment"
+  },
+  {
+   "slug": "philips-cpap",
+   "display": "Philips CPAP",
+   "aliases": [
+    "philips respironics",
+    "dreamstation"
+   ],
+   "category": "medical devices",
+   "parties": [
+    "Philips Respironics"
+   ]
+  },
+  {
+   "slug": "ozempic",
+   "display": "Ozempic",
+   "aliases": [
+    "semaglutide"
+   ],
+   "category": "prescription drugs",
+   "parties": [
+    "Novo Nordisk"
+   ]
+  },
+  {
+   "slug": "metformin",
+   "display": "Metformin",
+   "aliases": [],
+   "category": "prescription drugs"
+  },
+  {
+   "slug": "losartan",
+   "display": "Losartan",
+   "aliases": [],
+   "category": "prescription drugs"
+  },
+  {
+   "slug": "zantac",
+   "display": "Zantac",
+   "aliases": [
+    "ranitidine"
+   ],
+   "category": "OTC medicine",
+   "parties": [
+    "GlaxoSmithKline",
+    "Boehringer Ingelheim"
+   ]
+  },
+  {
+   "slug": "trader-joes",
+   "display": "Trader Joe's",
+   "aliases": [
+    "trader joe"
+   ],
+   "category": "grocery"
+  },
+  {
+   "slug": "costco",
+   "display": "Costco",
+   "aliases": [
+    "kirkland"
+   ],
+   "category": "grocery & retail"
+  },
+  {
+   "slug": "great-value",
+   "display": "Great Value",
+   "aliases": [],
+   "category": "grocery"
+  },
+  {
+   "slug": "kirkland",
+   "display": "Kirkland Signature",
+   "aliases": [
+    "kirkland"
+   ],
+   "category": "grocery & retail"
+  },
+  {
+   "slug": "frigidaire",
+   "display": "Frigidaire",
+   "aliases": [],
+   "category": "appliances"
+  },
+  {
+   "slug": "samsung-washer",
+   "display": "Samsung washers",
+   "aliases": [
+    "samsung washing machine"
+   ],
+   "category": "appliances"
+  }
+ ]
+}
