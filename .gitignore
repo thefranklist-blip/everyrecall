@@ -1,0 +1,7 @@
+data/*.ndjson
+data/*.tmp
+data/meta.json
+data/.refresh.lock
+data/cl_cache/
+data/page_cache/
+!data/fsis_manual.json
