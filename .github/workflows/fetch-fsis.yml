@@ -1,0 +1,42 @@
+# Fetches the Akamai-protected USDA FSIS recall feed on GitHub's servers
+# (where browser-impersonating TLS works) and commits it to the repo.
+# Your cPanel Git Version Control then auto-deploys it to the live site.
+name: Refresh FSIS recall data
+
+on:
+  schedule:
+    - cron: '17 8 * * *'      # daily at 08:17 UTC
+  workflow_dispatch:           # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write              # needed to commit the updated file
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install curl_cffi
+        run: pip install curl_cffi
+
+      - name: Fetch FSIS data (browser-impersonating TLS)
+        run: python fetch_fsis.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "everyrecall-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/fsis_manual.json
+          if git diff --staged --quiet; then
+            echo "No change in FSIS data."
+          else
+            git commit -m "chore: refresh FSIS recall data ($(date -u +%Y-%m-%d))"
+            git push
+          fi
