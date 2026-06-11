@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/franyhwl/everyrecall.org/
+    - /bin/cp -R recall_lib.php ingest.php api.php brand.php sitemap.php ads.php fetch_fsis.py $DEPLOYPATH
+    - /bin/cp -R index.html about.html brands.json robots.txt llms.txt site.webmanifest $DEPLOYPATH
+    - /bin/cp -R .htaccess $DEPLOYPATH
+    - /bin/cp -R og-image.png favicon.ico favicon-16.png favicon-32.png favicon-48.png apple-touch-icon.png icon-192.png icon-512.png $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH/data
+    - /bin/cp -f data/fsis_manual.json $DEPLOYPATH/data/fsis_manual.json
